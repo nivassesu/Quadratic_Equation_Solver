@@ -1,5 +1,5 @@
 **Quadratic Equation Solver 🧮**
-     A simple web application to solve quadratic equations (ax² + bx + c = 0) using Flask and Docker. Users can enter values for a, b, and c, and the app calculates the roots of the equation.
+          A simple web application to solve quadratic equations (ax² + bx + c = 0) using Flask and Docker. Users can enter values for a, b, and c, and the app calculates the roots of the equation.
 
 **Table of Contents**
    1. Features
