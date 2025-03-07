@@ -1,48 +1,79 @@
-🚀 Features
-Accepts quadratic equation coefficients (a, b, c) and calculates solutions.
-Handles edge cases such as non-real solutions and invalid inputs.
-Deployed using Docker and served via Gunicorn.
+**Quadratic Equation Solver 🧮**
+     A simple web application to solve quadratic equations (ax² + bx + c = 0) using Flask and Docker. Users can enter values for a, b, and c, and the app calculates the roots of the equation.
 
-🛠️ Tech Stack
-Backend: Python (Flask)
-Frontend: HTML, CSS (Jinja2 Templates)
-Database: (If applicable, mention SQLite/PostgreSQL)
-Containerization: Docker
-Deployment: Gunicorn
+**Table of Contents**
+   1. Features
+   2. Technologies Used
+   3. Installation
+   4. Usage
+   5. Docker Support
+   6. Project Structure
+**Features ✨**
+  ✔️ Solve quadratic equations using factoring and quadratic formula
+  ✔️ Handles real and complex roots
+  ✔️ User-friendly HTML interface
+  ✔️ Error handling for invalid inputs
+  ✔️ Dockerized for easy deployment
+**Technologies Used 🛠️**
+    Python 3.9
+    Flask (Backend framework)
+    HTML + Jinja2 (Frontend)
+    Docker (Containerization)
+    Gunicorn (WSGI Server)
+**Installation 🛠️
+Prerequisites**
+**Ensure you have the following installed:**
+  ✅ Python 3.9+
+  ✅ pip (Python Package Manager)
+  ✅ Git
+  ✅ Docker (Optional, for containerized deployment)
 
-📌 Installation
+1️⃣ **Clone the repository**
+            git clone https://github.com/yourusername/Quadratic_Equation_Solver.git
+            cd Quadratic_Equation_Solver
+   2️⃣ Set up a virtual environment (Optional but recommended)
+            python -m venv venv
+            source venv/bin/activate   # On Mac/Linux
+            venv\Scripts\activate      # On Windows
+3️⃣ Install dependencies
+            pip install -r requirements.txt
+4️⃣ Run the Flask app
+            python app.py
+**The app will run at: http://127.0.0.1:5000/ 🎉**
 
-1️⃣ Clone the Repository
+**Usage 🚀**
+      1️⃣ Open a web browser and go to: http://127.0.0.1:5000/
+      2️⃣ Enter values for a, b, c in the input fields.
+      3️⃣ Click Solve to get the roots of the equation.
+      4️⃣ The result will be displayed below the form.
+**Docker Support 🐳**
+**Run the app inside a Docker container:**
 
-2️⃣ Set Up a Virtual Environment
+**1️⃣ Build the Docker image**
 
-python -m venv venv
-source venv/bin/activate  # On macOS/Linux
-venv\Scripts\activate     # On Windows
-3️⃣ Install Dependencies
+      docker build -t quadratic_solver .
+      
+** 2️⃣ Run the container**
+      docker run -p 5000:5000 quadratic_solver
+Now, visit http://localhost:5000/ in your browser.
 
-pip install -r requirements.txt
-🚀 Running the Application
-Locally (Without Docker)
-
-python app.py
-The app will run on http://127.0.0.1:5000/.
-Using Docker
-1️⃣ Build the Docker Image
-
-docker build -t quadratic_solver .
-2️⃣ Run the Container
-
-docker run -p 5000:5000 quadratic_solver
-The app will be available at http://localhost:5000/.
-📄 API Endpoints
-Method	Endpoint	Description
-GET	/	Load the main page
-POST/	Solve a quadratic equation
-POST/   Solve	API to solve equations (JSON input)
-
-
-
+**Project Structure 📂**
+        Quadratic_Equation_Solver/    # Root project folder
+        │── app.py                    # Main Flask application file
+        │── Dockerfile                 # Docker configuration
+        │── requirements.txt           # List of dependencies
+        │── README.md                  # Project documentation
+        │
+        ├── templates/                 # HTML templates (Frontend UI)
+        │   ├── index.html             # Main user interface for input and output
+        │
+        ├── static/                    # Static files (CSS, JS, Images)
+        │
+        │   ├── images/                # Folder for storing images
+        │   │   ├── output1.png        # Example output image 1
+        │   │   ├── output2.png        # Example output image 2
+        │   │   ├── output3.png        # Example output image 3
+        
 
 
 
